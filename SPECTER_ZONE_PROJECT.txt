@@ -1,0 +1,81 @@
+
+========================
+        SPECTER ZONE
+========================
+FPS Horor Multiplayer Online | Gacha Senjata | Winner Pass | Diamond Token System
+
+----------------------------------------
+1. Struktur Folder Unity Project
+----------------------------------------
+Assets/
+├── Scenes/
+│   └── MainMenu.unity
+│   └── GameMap_Sekolah.unity
+├── Scripts/
+│   └── LoginManager.cs
+│   └── GachaSystem.cs
+│   └── TokenSystem.cs
+│   └── WeaponLevel.cs
+│   └── TopUpSystem.cs
+│   └── WinnerPass.cs
+├── Prefabs/
+│   └── CharacterBasic.prefab
+│   └── WeaponBasic.prefab
+├── UI/
+│   └── HUD.prefab
+│   └── GachaPanel.prefab
+
+----------------------------------------
+2. Fitur-Fitur Utama Game
+----------------------------------------
+- Mode FPS Online Only (offline dimatikan)
+- Gacha DM (8 jenis, rotasi mingguan)
+- 14 Senjata bertahap (upgrade pakai token)
+- 300 bundle karakter (12 bundle legend)
+- Winner Pass: reset tiap bulan (200 DM)
+- Token box harga 45 DM, isi acak 1–10 token
+- Kode redeem khusus developer
+- Bonus Top-up eWallet langsung masuk
+- Update dan reset rank tiap 2 bulan
+- Anti-cheat: banned aplikasi ilegal
+- Login via Google
+
+----------------------------------------
+3. Contoh Kode Sistem
+----------------------------------------
+
+// TokenSystem.cs (Level Up Senjata)
+public void AddToken(string weaponID, int amount) {
+    weaponTokens[weaponID] += amount;
+    CheckWeaponUpgrade(weaponID);
+}
+
+// GachaSystem.cs
+public void SpinGacha(string type) {
+    if (type == "diamond") {
+        // random draw legendary weapon or skin
+    } else if (type == "coin") {
+        // basic trial bundle
+    }
+}
+
+----------------------------------------
+4. Build Instruction (Untuk Developer)
+----------------------------------------
+- Unity Version: 2021.3.0f1 LTS
+- Target Platform: Android
+- Enable IL2CPP, min API 21
+- Scene utama: MainMenu.unity
+- Aktifkan Firebase (Auth + Realtime Database)
+
+----------------------------------------
+5. Branding
+----------------------------------------
+Game Name: SPECTER ZONE
+Icon: placeholder.png
+Developer: stria (ssatsukabobo@gmail.com)
+Top-up via GoPay: 081241869698
+
+---------------------------
+>> Kirim file ini ke developer Unity
+>> Mereka bisa langsung bangun project & build APK
